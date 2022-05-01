@@ -1,0 +1,78 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Poppins", sans-serif;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+html {
+  font-size: 62.5%;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+}
+
+.app__loader {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+.app__loader img {
+  width: 200px;
+  animation: loaderAnimation 5s infinite;
+}
+@keyframes loaderAnimation {
+  0% {
+    transform: rotate(-360deg);
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 1);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 1);
+  
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(255, 62, 62);
+}

@@ -1,0 +1,18 @@
+{
+  "name": "aeternumourobos",
+  "version": "1.0.0",
+  "description": "Ourobos Tattoo presentation & cotizador de tatuajes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "skripted11",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "AeternumOurobos"
+  },
+  "keywords": [
+    "ourobostattoo"
+  ]
+}

@@ -1,0 +1,364 @@
+.app__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+
+/* HEADER */
+.header__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* background-color:rgba(0, 0, 0, 0.5); */
+}
+
+.header-text {
+  width: 85%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  border:solid 2px white;
+  margin:10px;
+  padding:10px;
+
+  background-color:rgba(0, 0, 0, 0.5);
+}
+.header-text h1 {
+  font-size: 3.5rem;
+}
+.header-text div {
+  font-size: 2.2rem;
+}
+.header-social {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  align-items: center;
+  justify-content: center;
+}
+.header-social img {
+  border: solid 2px transparent;
+  border-radius: 5px;
+  padding: 5px;
+  transition: ease-in 0.5s;
+  filter: invert(100);
+}
+.header-social a {
+  align-self: center;
+  margin: 0px 5px;
+  display: inherit;
+}
+.header-social img:hover {
+  border: solid 2px black;
+}
+
+.headerLogo__container {
+  position: relative;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  width:100%;
+  height:200px;
+  margin:auto;
+}
+.headerLogo__container img{
+  position:absolute;
+  z-index:2;
+  width: 150px;
+}
+
+#headerLogoExtraId{
+  z-index:1;
+  filter:invert(100%);
+  border-radius:25px 25px;
+  padding:5px;
+}
+
+.disponibility{
+  display: flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:space-evenly;
+  padding:10px;
+  margin:10px;
+  font-size:1.5rem;
+  color:white;
+  background-color:rgba(0, 0, 0, 0.5);
+
+}
+.disponibilityTrue{
+background-color:rgba(175, 255, 0, 0.3);
+border:solid 2px rgb(175, 255, 0);
+}
+.disponibilityFalse{
+  background-color:rgba(255, 0, 55, 0.3);
+  border:solid 2px rgb(255, 0, 55);
+}
+/*NAV BAR CONTAINER*/
+.sections_nav__container{
+color:white;
+width:90%;
+margin:auto;
+margin-bottom:20px;
+}
+.sections_nav__container ul{
+  list-style:none;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap:5px;
+}
+
+.sections_nav__container a{
+  background-color:rgba(0, 0, 0, 0.5);
+  scroll-behavior: smooth;
+  color:white;
+  display:flex;
+  padding:5px;
+  font-size:1.5rem;
+  text-align:center;
+  align-items:center;
+  justify-content:center;
+  min-width:50px;
+  min-height:40px;
+  border:solid 2px white;
+  text-decoration:none;
+  transition:ease-in-out .2s;
+}
+.sections_nav__container a:hover{
+  cursor:pointer;
+  border:solid 2px rgb(255, 62, 62);
+}
+/*MAIN CONTAINER*/
+.main__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+  transition:ease-in-out 0.5s;
+}
+/*COTIZAR TATTOO*/
+
+.section__container {
+  padding:15px;  
+  display:none;
+  color:white;
+  transition:ease-in-out 0.5s;
+  background-color:rgba(0, 0, 0, 0.5);
+
+}
+.sectionInfo__container{
+  display:grid;
+  margin:auto;
+  
+}
+.sectionDiv-text {
+  font-size: 1.5rem;
+  padding: 15px;
+  align-self: center;
+  background-color:rgba(0, 0, 0, 0.7);
+  border-radius:5px;
+}
+.sectionDiv-text ul {
+  /* margin-left: 25px; */
+  padding:5px;
+  list-style: none;
+}
+
+.sectionDiv-text li {
+  margin: 10px 0px;
+  font-size: 1.5rem;
+}
+.sectionDiv-text li a{
+  text-decoration: underline ;
+  color:rgb(255, 62, 62);
+}
+
+.cotizarTattProgr {
+  min-width: 200px;
+  /* min-height: 350px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cotizarTattProgr-widthAndHeight {
+  border: solid 2px rgba(255, 255, 255, 0.5);
+  background-color:rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 15px;
+  margin: 10px 0px;
+  width: 90%;
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+.cotizarTattProgr-widthAndHeight label {
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+  justify-content: space-between;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  
+}
+.cotizarTattProgr-widthAndHeight input {
+  width: 50%;
+  height: 25px;
+  border: solid 2px rgba(255, 255, 255, 0.2);
+
+  background-color:rgba(0, 0, 0, 0.5);
+  color:white;
+  text-align:center;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 1.5rem;
+}
+.cotizarTattProgr-Selects {
+  text-align: center;
+  width: 90%;
+  max-width: 550px;
+  margin-top: 15px;
+}
+.checkBox__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  margin: 10px;
+  font-size: 1.5rem;
+  text-align: start;
+}
+.checkBox__container label {
+  margin: 10px;
+  border-radius: 5px;
+  padding: 10px;
+}
+.checkBox__container label:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.checkBox__container input {
+  margin: 5px;
+}
+.cotizationDiv {
+  width: 90%;
+  max-width: 550px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 1rem;
+  text-align:center;
+margin:5px;
+padding:10px;
+  gap:5px;
+}
+#finalPrice {
+  border:solid 2px transparent;
+  padding: 10px;
+  font-size: 1.5rem;
+  background-color:rgba(0, 0, 0, 0.5);
+  /* margin-left: 5px; */
+  border-radius: 3px;
+
+}
+
+#btnCotizar {
+  padding: 10px;
+  border: solid 2px rgba(255, 255, 255, 0.5);
+  color:white;
+  transition: ease-in-out 0.5s;
+  background-color: transparent;
+  border-radius: 5px;
+}
+#btnCotizar:hover {
+  border: solid 2px rgba(255, 255, 255, 0.9);
+  background-color:rgba(0, 0, 0, 0.5);
+  color:white;
+  cursor: pointer;
+}
+
+.sectionFooter{
+  display:grid;
+  width:90%;
+  max-width:550px;
+  margin:auto;
+}
+#tattooCotizationMsgId{
+  color:rgba(255, 255, 255, 0.5);
+}
+#tattooCotizationMoreInfoId{
+  display:none;
+}
+#tattooCotizationMoreInfoId a{
+  text-decoration: underline ;
+  color:rgb(255, 62, 62);
+}
+
+.footerNav__container{
+  width:100%;
+  height:auto;
+  display:grid;
+  position: fixed;
+  bottom:0px;
+  left:0px;
+}
+.footerNav{
+  list-style:none;
+  display:grid;
+  grid-auto-flow: column;
+}
+.footerNavItem{
+  margin:5px;
+  text-align:center;
+}
+.footerNavItem a{
+color:white;
+  text-decoration:none;
+}
+
+#backgroundVideoId {
+  position: fixed;
+  opacity: 100%;
+  filter: blur(10px);
+  z-index: -999;
+  bottom:0px;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+#bgColorId{
+  background-color:black;
+  width:100%;
+  height:100%;
+  position:fixed;
+  z-index:-9999;
+  bottom:0px;
+
+}
+
+.paymentSeña{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:left;
+}
+#paymentBtn{
+  margin:15px;
+  font-size:1.5rem;
+  display:none;
+  
+}
+
+@media (min-width: 400px) {
+
+  .app__container{
+    margin:auto;
+    max-width:900px;
+
+  }
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/media/favicon.png">
+  <link rel="stylesheet" href="./src/index.css" />
+  <link rel="stylesheet" href="./src/app.css" />
+  <link rel="stylesheet" href="./src/ElemStyles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit&family=Poppins:wght@100;200;400&display=swap"
+    rel="stylesheet" />
+  <title>AeternumOurobos</title>
+</head>
+
+<body>
+  <div class="app__loader">
+    <img src="./media/OurobosTatt-Loading.png" alt="">
+    <h2 id="loadingTextID">Cargando</h2>
+  </div>
+  <div class="app__container">
+    <header class="header__container">
+      <div class="headerLogo__container">
+        <img src="./media/OurobosTattLogo.png" alt="ourobos-tatt-logo" />
+      <img id="headerLogoExtraId" src="./media/OurobosTattLogo-extra.png" alt="" />
+      </div>
+      <div class="disponibility">
+        <h4 id="disponibilityState"></h4>
+      </div>
+      <div class="header-text">
+        <h1 class="underlineSeparation">Aeternum <br>Ourobos Tattoo</h1>
+        <div>Estudio Privado</div>
+      </div>
+      <div class="header-social">
+        <div style="display:flex; margin:5px;">
+          <a target="_blank" href="https://www.instagram.com/aeternumourobos/" title="Instagram"><img
+              src="https://img.icons8.com/material-outlined/30/000000/instagram-new--v1.png" /></a>
+          <!-- <a target="_blank" href="https://wa.me/2974056545?text=Hola,%20me%20gustaria%20hacerle%20una%20consulta" title="Whatsapp"><img
+              src="https://img.icons8.com/material-outlined/30/000000/whatsapp--v1.png" /></a> -->
+        </div>
+      </div>
+    </header>
+    <div class="sections_nav__container">
+      <ul selected="1" id="navBarId" class="sec_nav-list">
+        <a href="#mainSection" for="mainSection" value="1">Inicio</a>
+        <a href="#tattooCotiz" for="tattooCotiz" value="2">Cotizar Tatuaje</a>
+        <a href="#tattooCare" for="tattooCare" value="3">Cuidados del Tatuaje</a>
+        <a href="#tattooSchedule" for="tattooSchedule" value="4">Agendar Turno</a>
+      </ul>
+    </div>
+    <main id="mainContainerId" class="main__container">
+      <section id="mainSection" class="section__container">
+        <h1 class="h1-sectionTitle underlineSeparation">Inicio:</h1>
+        <div class="sectionInfo__container">
+          <div class="sectionDiv-text">
+            <h2 class="h2-sectionText">Introdución a OurobosTattoo:</h2>
+            Los tatuajes son una de las pocas cosas que realmente duran para toda la vida, por lo tanto
+            darle la importancia que requiere es tarea tanto del Artista Tatuador siendo este capaz de tomar
+            la idea del cliente, interpretar su significado y grabarlo en su piel asi como la del ciente
+            sabiendo respetar el proceso y sus cuidados.
+            <br>
+            <br>      
+            Este proyecto pretende abarcar tanto la aplicación del tatuaje en si como la Creación de Diseños únicos 
+            para cada cliente a partir de sus ideas, experiencias y creencias personales trayendolas al mundo real y
+            grabarlas en su piel adoptando un lugar donde pueda expresarse no solo como una idea sino como la representación artistica de la misma.
+            <br>
+            <br>
+            Los tatuajes siguen su curso a través de la historia, adquiriendo nuevos significados o deshaciendose de ellos, reformulando por completo
+            un estilo o simplemente adaptandolo a algo mas moderno, lo cierto es que independientemente del estilo que estes buscando o lo que quieras expresar
+            el diseño de este es lo mas importante, no solo por su exclusividad sino por el significado unico y personal que este pueda representa.
+            <br>
+            <br>
+            ¿A donde voy con todo esto?
+            <br>
+            <br>
+            A que cada diseño / tatuaje tiene la posibilidad de ser único y eso es justamente la idea detrás de mi constante esfuerzo por aprender
+            técnicas nuevas que me permitan interpretar una idea, llevarla a la hoja y luego a la piel. Debo admitir que esto no es nada nuevo, la idea
+            de plasmar las experiencias de la vida de una persona en su piel surge en Japón hace ya mas de 300 Años, en el Periodo Edo. La esencia y la idea
+            que representa el Horimono sigue estando vigente hasta hoy en dia, es por eso que mis esfuerzos estan dedicados a entender y aprender de este arte.
+        
+             <ul>
+              <li>
+                Probablemente estes interesado en
+                <a class="aRedirection" for="tattooCotiz" href="#tattooCotiz">Cotizar un Tatuaje</a>.
+              </li>
+  
+              <li>
+                Tambien podes ver los
+                <a class="aRedirection" for="tattooCare" href="#tattooCare">Cuidados del Tatuaje</a>.
+              </li>
+  
+              <li>
+                Recorda que podes ver mi Trabajo y escribirme a traves de Instagram: <a target="_blank" href="https://www.instagram.com/aeternumourobos/">@AeternumOurobos</a>.
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+    </section>
+      <section id="tattooCotiz" class="section__container">
+        <h1 class="h1-sectionTitle underlineSeparation">Cotizar Tatuaje:</h1>
+        <div class="sectionInfo__container">
+          <div class="sectionDiv-text">
+            ¿Ya tenes tu diseño? Genial vamos a cotizarlo. <br>
+            <br>
+            Recorda que esta sección esta pensada
+            para que puedas consultar facilmente el costo del tatuaje, 
+            <b style="color:rgb(255, 62, 62);"> este puede variar</b>
+            dependiendo de, por ejemplo; la complejidad del diseño,
+            zona del cuerpo, tamaño, si es a color, etc. Es probable que el precio final no sea el mismo.
+
+            <ul>
+              <h2 class="h2-sectionText">¿Cómo lo hago?</h2>
+              <li>Primero debemos tener el tamaño aproximado del alto y largo del tatuaje en Centímetros
+                (te recomiendo medir con una regla o cinta métrica la zona del cuerpo donde queres el tatuaje).</li>
+                <li>
+                  Ya que tenemos las medidas, ingresamos el tamaño en Cm (por ej: Largo: 15cm y Alto: 22cm)
+                  en los campos correspondientes.</li>
+              <li>Dale a cotizar y listo!</li>
+            </ul>
+          </div>
+        </div>
+
+        <form id="formEl" action="" class="cotizarTattProgr">
+          <div class="cotizarTattProgr-widthAndHeight">
+            <label for="cmWidth">Largo:
+              <input required min="1" maxlength="2" max="45" name="cmWidth" type="number" class="widthAndHeightStyle"
+                placeholder="Centimetros" id="cmWidth"></input>
+            </label>
+            <label for="cmHeight">Alto:
+              <input required min="1" max="40" name="cmHeight" type="number" class="widthAndHeightStyle"
+                placeholder="Centimetros" id="cmHeight"></input>
+            </label>
+          </div>
+          <div class="cotizationDiv">
+            <button id="btnCotizar">Cotizar</button>
+            <div id="finalPrice">Precio:</div>
+          </div>
+        </form>
+        <div id="tattooCotizationMoreInfoId" class="sectionFooter sectionDiv-text">
+          <div id="tattooCotizationMsgId"></div>
+          <div>
+            <ul>
+              <li>
+                Te recomiendo que veas los <a class="aRedirection" for="tattooCare" href="#tattooCare">Cuidados del Tatuaje</a>.
+              </li>
+              <li>
+                Tambien podes <a class="aRedirection" for="#tattooSchedule" href="#tattooSchedule">Agendar un Turno</a>.
+              </li>
+              <li>
+                ¿Tenes alguna duda? Escribime a traves de Instagram: <a target="_blank" href="https://www.instagram.com/aeternumourobos/">@AeternumOurobos</a>.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+    </section>
+       <section id="tattooCare" class="section__container">
+        <h1 class="h1-sectionTitle underlineSeparation">Cuidados del Tatuaje:</h1>
+        <div class="sectionInfo__container">
+          <div class="sectionDiv-text">
+            Como cuidar tu tatuaje: <br>
+            Esta sección esta pensada para que puedas consultar facilmente como son los cuidados del tatuaje.
+            Cabe destacar que los consejos que doy aqui <b style="color:rgb(255, 62, 62);">estan basados en mis conocimientos y experiencia como tatuador</b>
+            asi como el seguimiento que le doy a los tatuajes de mis clientes.  Recoda que ante la menor duda <b style="color:rgb(255, 62, 62);"> es mejor consultar con un Médico Profesional</b>.
+
+            <ul>
+              <li><span class="sub-titleSpan">Dia Nº1:</span> <br>
+                <br>
+                 Cuando termine la sesión el tatuaje va a ser cubierto para prevenir que cualquier tipo de agente contaminante externo pueda llegar a infectar esta herida.
+                <br>
+                <br>
+                <strong>Papel Film:</strong> Lo mas recomendable es dejarlo puesto de 6 a 8 Horas maximo, sacarlo, limpiar la herida con agua templada y jabón blanco antibacterial y reemplazarlo por uno nuevo dejandolo de 2 a 4 Horas máximo.<br>
+                <br>
+                <strong>Pelicula protectora o Parche:</strong> Dejarlo puesto lo que dure el cuidado del tatuaje o lo que indique el tatuador (Aproximadamente 1 Semana).
+                <br>
+                <br>
+                En ambos casos, cuando se quite el protector lavar la herida con agua templada y jabon blanco o Antibacterial.
+              </li>
+              <li> <span class="sub-titleSpan">Dia Nº2 y Nº3:</span> <br>
+                <br>
+                 Comienza el proceso de cicatrización, es decir, se comienza a generar una costra
+                por encima de la herida, en este punto, para prevenir el engrosamiento de esta capa protectora debemos comenzar a aplicar alguna crema hidratante sin colorantes y/o aromatizantes.
+                <br>
+                <br>
+                Esto lo vamos a hacer 2 o 3 veces al dia y siempre teniendo en cuenta que el objetivo es dejar cicatrizar la herida pero que esta no se seque y produzca una costra mas gruesa que pueda llegar a afectar la estetica del tatuaje final cuando cicatrice.
+                <br>
+                <br>
+                <strong>Cremas recomendadas:</strong> Bepanthol Bayer. Dermaglos y Bagovit A, ambas sin colorantes ni aromatizantes.
+                <br>
+                <br>
+                <span class="sub-titleSpanRed">IMPORTANTE:</span> En el caso de que ya haya comenzado el proceso de cicatrizacion de la piel NO REMOVER LA COSTRA, aplicar la crema hidratante evitando cualquier tipo de rozadura con esa zona hasta que se desprenda de forma natural.
+                Si la zona del tatuaje presenta algun sintoma de irritación suspender el uso de la crema. No aplicar la crema antes de haber pasado 24Hs luego de finalizar la sesión de tatuaje. En caso de que la herida no haya comenzado a cicatrizar no utilizar la crema y limpiarlo regularmente para prevenir cualquier tipo de infección.
+              </li>
+               <li> <span class="sub-titleSpan">Dia Nº4 al Nº7:</span> <br>
+                <br>
+                 Seguir aplicando la crema humectante (preferentemente alguna de las recomendadas más arriba) de 2 a 3 veces por dia
+                 cubriendo la zona del tatuaje.
+                <br>
+                <br>
+                <span class="sub-titleSpanRed">IMPORTANTE:</span>
+                Durante el proceso de curación (Minimo una Semana) debemos recodar que: 
+                <ul>
+                  <li>-El tatuaje NO debe estar expuesto al sol.</li>
+                  <li>-El tatuaje SOLO se debe higienizar con agua fria / templada y los elementos de cuidado antes mencionados.</li>
+                  <li>-Evitar el contacto directo entre la zona del tatuaje / herida y cualquier superficie que no este desinfectada.</li>
+                  <li>-No se debe de rascar la zona en cuestión ni quitar a la fuerza la cascara o costra que se produce naturalmente encima
+                    de la herida ya que esto no solo podria afectar la estética final del tatuaje sino llegar a lastimar la piel.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </section>
+  <section id="tattooSchedule" class="section__container">
+    <h1 class="h1-sectionTitle underlineSeparation">Agendar Turno:</h1>
+    <div class="sectionInfo__container">
+      <h2 class="h2-sectionText">Agendar un turno por Mercado Pago:</h2>
+      <div id="paymentSection" class="sectionDiv-text paymentSeña">
+      </div>
+      <div id="paymentBtn">
+      <script src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
+        data-preference-id="254898688-e7ace32d-c4d5-4544-8a45-1ebc8993b57e" data-source="button">
+        </script>
+      </div>
+    </div>
+</section>
+  </main>
+  </div>
+  <video autoplay muted loop id="backgroundVideoId">
+    <source src="./media/backgroundVideo.mp4" type="video/mp4">
+  </video>
+  <div id="bgColorId"></div>
+  <script src="./src/logic.js" type="module"></script>
+</body>
+
+</html>
