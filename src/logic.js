@@ -42,6 +42,7 @@ function handleCotizar(e) {
         const totalCm = dataObj.cmWidth * dataObj.cmHeight
         const foo = totalCm * pricePerCm
         const handleTotalCm = (totalCm) => {
+           
             if (totalCm <= 50) return 100
             if (totalCm <= 100) return 10
             if (totalCm <= 200) return 6
@@ -49,7 +50,7 @@ function handleCotizar(e) {
         }
 
         let finalAmount = Math.round(foo - foo / handleTotalCm(totalCm) + Number(basicAmount))
-        if (finalAmount <= 1100) finalAmount += 250
+        if (finalAmount <= 2000) finalAmount = 2000
 
         const finalObj = {
             insumosPrice: basicAmount,
