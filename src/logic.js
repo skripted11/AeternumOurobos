@@ -50,7 +50,7 @@ function handleCotizar(e) {
         }
 
         let finalAmount = Math.round(foo - foo / handleTotalCm(totalCm) + Number(basicAmount))
-        if (finalAmount <= 2000) finalAmount = 2000
+        if (finalAmount <= 2500) finalAmount = 2500
 
         const finalObj = {
             insumosPrice: basicAmount,
