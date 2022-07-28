@@ -166,8 +166,8 @@ const printDisponibilityState = (values) => {
     const dispElement = document.getElementById("disponibilityState")
     let message
     let date = values[1].toUpperCase()
-    let sessCost = values[2]
-Console.log(sessCost)
+    let sessCost = String(values[2])
+    Console.log(sessCost)
     Console.log(values)
     if (values[0] == "TRUE") {
         console.log(values);
