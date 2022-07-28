@@ -167,8 +167,8 @@ const printDisponibilityState = (values) => {
     let message
     let date = values[1].toUpperCase()
     let sessCost = String(values[2])
-    Console.log(sessCost)
-    Console.log(values)
+    console.log(sessCost)
+    console.log(values)
     if (values[0] == "TRUE") {
         console.log(values);
         message = `AGENDA ABIERTA: ${date}`
