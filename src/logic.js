@@ -205,6 +205,8 @@ const handleDisponibility = async () => {
         .then((lista) => {
             return lista.json()
         }).then((state) => {
+        console.log(state)
+        console.log(state.values)
             printDisponibilityState(state.values[0])
         }).catch(err => {
             console.log(err);
