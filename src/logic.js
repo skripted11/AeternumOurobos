@@ -2,7 +2,7 @@ import { tattooXnY } from "./configFile.js"
 
 const idSheets = '1MERztkt3mv4lQbHRVpc1iPdochBNwBwV7CXfrMKrP1o'
 const apiKey = 'AIzaSyC8qom2bU-CbjLUCl_v7_4uRSrMZ1eEDIE'
-const sheetValues = 'B16:B17'
+const sheetValues = 'B17:B18'
 const sheetUrl = "https://content-sheets.googleapis.com/v4/spreadsheets/" + idSheets + "/values/" + sheetValues + "?access_token=" + apiKey + "&key=" + apiKey
 
 const finalPriceEl = document.getElementById("finalPrice")
@@ -20,6 +20,19 @@ const handleCloseLoadingAnim = () => {
     clearInterval(animInterval)
     loadingModal.style.display = "none"
 }
+
+//handle infoBasic
+function handleInfoBasic(){
+    const calculateExpYears = () => {
+        const TATT_SINCE = 2019
+        const ACTUAL_YEAR = new Date().getFullYear()
+        return ACTUAL_YEAR - TATT_SINCE
+    }
+    document.getElementById("tattoinTime").innerHTML = String(calculateExpYears())
+
+}
+
+
 //Handle Cotization
 function handleCotizar(e) {
     e.preventDefault()
@@ -153,7 +166,9 @@ const printDisponibilityState = (values) => {
     const dispElement = document.getElementById("disponibilityState")
     let message
     let date = values[1].toUpperCase()
+    let sessCost = values[2]
     if (values[0] == "TRUE") {
+        console.log(values);
         message = `AGENDA ABIERTA: ${date}`
         dispElement.parentNode.classList.add("disponibilityTrue")
         paymentDivEl.innerHTML = `
@@ -161,10 +176,10 @@ const printDisponibilityState = (values) => {
         Antes de realizar el pago te recomiendo escribirme para arreglar una fecha y hablar acerca del tatuaje y 
         diseño.
         <br>
-        Por cierto, el valor de la seña sera descontado del valor final del tatuaje.
+        (el valor de la seña sera descontado del valor final del tatuaje)
         <br>
         <br>
-        Valor de la Seña: $1000 
+        Valor de la Seña: $${sessCost} 
         <br>
         <br>
         `
@@ -178,14 +193,13 @@ const printDisponibilityState = (values) => {
         Lo siento, actualmente la agenda para este mes se encuentra cerrada.
         <br>
         <br>
-        Valor de la Seña: $1000 
         `
         paymentBtn.style.display = "none"
     }
     dispElement.innerText = message
 }
 const handleDisponibility = async () => {
-    fetch("https://content-sheets.googleapis.com/v4/spreadsheets/" + idSheets + "/values/B15:C15" + "?access_token=" + apiKey + "&key=" + apiKey)
+    fetch("https://content-sheets.googleapis.com/v4/spreadsheets/" + idSheets + "/values/B15:C16" + "?access_token=" + apiKey + "&key=" + apiKey)
         .then((lista) => {
             return lista.json()
         }).then((state) => {
@@ -200,4 +214,5 @@ handleDisponibility()
 
 window.onload = () => {
     handleCloseLoadingAnim()
+    handleInfoBasic()
 }
