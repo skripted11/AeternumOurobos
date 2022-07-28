@@ -165,12 +165,9 @@ const printDisponibilityState = (values) => {
     const paymentDivEl = document.getElementById("paymentSection")
     const dispElement = document.getElementById("disponibilityState")
     let message
-    let date = values[1].toUpperCase()
-    let sessCost = String(values[2])
-    console.log(sessCost)
-    console.log(values)
-    if (values[0] == "TRUE") {
-        console.log(values);
+    let date = values[0][1].toUpperCase()
+    let sessCost = values[1][0]
+    if (values[0][0] == "TRUE") {
         message = `AGENDA ABIERTA: ${date}`
         dispElement.parentNode.classList.add("disponibilityTrue")
         paymentDivEl.innerHTML = `
@@ -205,9 +202,7 @@ const handleDisponibility = async () => {
         .then((lista) => {
             return lista.json()
         }).then((state) => {
-        console.log(state)
-        console.log(state.values)
-            printDisponibilityState(state.values[0])
+            printDisponibilityState(state.values)
         }).catch(err => {
             console.log(err);
         })
