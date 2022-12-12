@@ -1,271 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./media/OurobosTatt-Loading.png"
+    />
+    <link rel="stylesheet" href="./src/index.css" />
+    <link rel="stylesheet" href="./src/app.css" />
+    <link rel="stylesheet" href="./src/ElemStyles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit&family=Poppins:wght@100;200;400&display=swap"
+      rel="stylesheet"
+    />
+    <title>AeternumOurobos</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/x-icon" href="./media/OurobosTatt-Loading.png">
-  <link rel="stylesheet" href="./src/index.css" />
-  <link rel="stylesheet" href="./src/app.css" />
-  <link rel="stylesheet" href="./src/ElemStyles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit&family=Poppins:wght@100;200;400&display=swap"
-    rel="stylesheet" />
-  <title>AeternumOurobos</title>
-</head>
-
-<body>
-  <div class="app__loader">
-    <img preload src="./media/OurobosTatt-Loading.png" alt="">
-    <h2 id="loadingTextID">Cargando</h2>
-  </div>
-  <div class="app__container">
-    <header class="header__container">
-      <div class="headerLogo__container">
-        <img src="./media/OurobosTatt-Loading.png" alt="ourobos-tatt-logo" />
-      <!-- <img id="headerLogoExtraId" src="./media/OurobosTattLogo-extra.png" alt="" /> -->
-      </div>
-      <div class="disponibility">
-        <h4 id="disponibilityState"></h4>
-      </div>
-      <div class="header-text">
-        <h1 class="underlineSeparation">Ourobos Tattoo</h1>
-        <div>Home Estudio Privado</div>
-      </div>
-      <div class="header-social">
-        <div style="display:flex; margin:5px;">
-          <a target="_blank" href="https://wa.me/542974056545?text=Hola,%20Me%20gustaria%20cotizar%20un%20tatuaje.%20" title="WhatsApp"><img
-            src="https://img.icons8.com/material-outlined/30/000000/whatsapp--v1.png" /></a>
-          <a target="_blank" href="https://www.instagram.com/ourobostattoo/" title="Instagram"><img
-              src="https://img.icons8.com/material-outlined/30/000000/instagram-new--v1.png" /></a>
-        </div>
-      </div>
-    </header>
-    <div class="sections_nav__container">
-      <ul selected="1" id="navBarId" class="sec_nav-list">
-        <a href="#mainSection" for="mainSection" value="1">Inicio</a>
-        <a href="#tattooCotiz" for="tattooCotiz" value="2">Cotizar Tatuaje</a>
-        <a href="#tattooCare" for="tattooCare" value="3">Cuidados Tatuaje</a>
-        <a href="#tattooSchedule" for="tattooSchedule" value="4">Agendar Turno</a>
-      </ul>
+  <body>
+    <div class="app__loader">
+      <img preload src="./media/OurobosTatt-Loading.png" alt="" />
+      <h2 id="loadingTextID">Cargando</h2>
     </div>
-    <main id="mainContainerId" class="main__container">
-      <section id="mainSection" class="section__container">
-        <h1 class="h1-sectionTitle underlineSeparation">Inicio:</h1>
-        <div class="sectionInfo__container">
-          <div class="sectionDiv-text">
-            <h2 class="h2-sectionText">Presentación</h2> 
-            
-            Mi nombre es Maximiliano Pavez y actualmente llevo <span id="tattoinTime"></span> Años ejerciendo la profesion de tatuador.
-            <br>
-            <br>
-            Esta pagina pretende simplificar la informacion mas relevante del mundo de los tatuajes como son los cuidados del tatuaje, la cotización de los mismos y la agendación de turnos.
-            <br>
-            
-          
-            <ul>
-              <li>
-                Probablemente estes interesado en
-                <a class="aRedirection" for="tattooCotiz" href="#tattooCotiz">Cotizar un Tatuaje</a>.
-              </li>
-  
-              <li>
-                Tambien podes ver los
-                <a class="aRedirection" for="tattooCare" href="#tattooCare">Cuidados del Tatuaje</a>.
-              </li>
-  
-              <li>
-                Recorda que podes ver mi Trabajo y escribirme a traves de Instagram: <a target="_blank" href="https://www.instagram.com/ourobostattoo/">@OurobosTattoo</a>.
-              </li>
-            </ul>
-          </div>
-          
+    <div class="app__container">
+      <header class="header__container">
+        <div class="headerLogo__container">
+          <img src="./media/OurobosTatt-Loading.png" alt="ourobos-tatt-logo" />
+          <!-- <img id="headerLogoExtraId" src="./media/OurobosTattLogo-extra.png" alt="" /> -->
         </div>
-    </section>
-      <section id="tattooCotiz" class="section__container">
-        <h1 class="h1-sectionTitle underlineSeparation">Cotizar Tatuaje:</h1>
-        <div class="sectionInfo__container">
-          <div class="sectionDiv-text">
-            ¿Ya tenes tu diseño? Vamos a cotizarlo: <br>
-            <br>
-            Recorda que esta sección esta pensada
-            para que puedas consultar facilmente el costo del tatuaje, 
-            <b style="color:rgb(255, 62, 62);"> este puede variar</b>
-            dependiendo de, por ejemplo: la complejidad del diseño,
-            zona del cuerpo, tamaño, si es a color, etc. Es probable que el precio final no sea el mismo.
-
-            <ul>
-              <h2 class="h2-sectionText">¿Cómo lo hago?</h2>
-              <li>Primero debemos tener el tamaño aproximado del alto y largo del tatuaje en Centímetros
-                (te recomiendo medir con una regla o cinta métrica la zona del cuerpo donde queres el tatuaje).</li>
-                
-              <li>Ya que tenemos las medidas, ingresamos el tamaño en Cm en los campos correspondientes.</li>
-              <li>Dale a cotizar y listo!</li>
-            </ul>
+        <div class="disponibility">
+          <h4 id="disponibilityState"></h4>
+        </div>
+        <div class="header-text">
+          <h1 class="underlineSeparation">OUROBOS TATTOO</h1>
+          <div>Estudio de Tatuajes Privado</div>
+        </div>
+        <div class="header-social">
+          <div style="display: flex; margin: 5px">
+            <a
+              target="_blank"
+              href="https://wa.me/542974056545?text=Hola,%20Me%20gustaria%20cotizar%20un%20tatuaje.%20"
+              title="WhatsApp"
+              ><img
+                src="https://img.icons8.com/material-outlined/30/000000/whatsapp--v1.png"
+            /></a>
+            <a
+              target="_blank"
+              href="https://www.instagram.com/ourobostattoo/"
+              title="Instagram"
+              ><img
+                src="https://img.icons8.com/material-outlined/30/000000/instagram-new--v1.png"
+            /></a>
           </div>
         </div>
-
-        <form id="formEl" action="" class="cotizarTattProgr">
-          <div class="cotizarTattProgr-widthAndHeight">
-            <label for="cmWidth">Largo:
-              <input required min="1" maxlength="2" max="45" name="cmWidth" type="number" class="widthAndHeightStyle"
-                placeholder="Centimetros" id="cmWidth"></input>
-            </label>
-            <label for="cmHeight">Alto:
-              <input required min="1" max="40" name="cmHeight" type="number" class="widthAndHeightStyle"
-                placeholder="Centimetros" id="cmHeight"></input>
-            </label>
-          </div>
-          <div class="cotizationDiv">
-            <button id="btnCotizar">Cotizar</button>
-            <div id="finalPrice">Precio:</div>
-          </div>
-        </form>
-        <div id="tattooCotizationMoreInfoId" class="sectionFooter sectionDiv-text">
-          <div id="tattooCotizationMsgId"></div>
-          <div>
-            <ul>
-              <li>
-                Te recomiendo que veas los <a class="aRedirection" for="tattooCare" href="#tattooCare">Cuidados del Tatuaje</a>.
-              </li>
-              <li>
-                Tambien podes <a class="aRedirection" for="#tattooSchedule" href="#tattooSchedule">Agendar un Turno</a>.
-              </li>
-              <li>
-                ¿Tenes alguna duda? Escribime a traves de Instagram: <a target="_blank" href="https://www.instagram.com/ourobostattoo/">@OurobosTattoo</a>.
-              </li>
-            </ul>
-          </div>
-        </div>
-
-    </section>
-       <section id="tattooCare" class="section__container">
-        <h1 class="h1-sectionTitle underlineSeparation">Cuidados del Tatuaje:</h1>
-        <div class="sectionInfo__container">
-          <div class="sectionDiv-text">
-            Esta sección esta pensada para que puedas consultar facilmente los cuidados del tatuaje en base a mi experiencia como tatuador asi como el seguimiento
-            que le doy a los tatuajes de mis clientes.  Recoda que ante la menor duda <b style="color:rgb(255, 62, 62);"> es mejor consultar con un Médico Profesional</b>.
-            <br>
-            <br> <span class="sub-titleSpan">Conocimientos previos post Tattoo:</span><br>
-            <ul style="list-style-type: disc;">
-              <li>No rascar o exponer el tatuaje (herida) al polvo / humedad constante.</li>
-              <li>Evitar exponer la zona del tatuaje al sol directo.</li>
-              <li>No exponer la zona del tatuaje a superficies o ambientes antihigiénicos o que <br> no esten previamente desinfectados.</li>  
-              <li>Durante este proceso de curado esta super desaconsejado nadar en piscinas publicas o la playa. No se recomienda realizar ninguna clase de deporte que conlleve esfuerzo físico.</li>
-            </ul>
-
-            <br>
-            <span class="sub-titleSpan">Proceso de Curado:</span>
-            <br>
-            <br>
-            <strong>Cremas recomendadas:</strong> Bepanthol Bayer. Dermaglos y Bagovit A, ambas sin colorantes ni aromatizantes.
-            <br>
-            <ul style="list-style-type: disc;">
-              <li>Tiempo aproximado de curado: De 7 a 12 Dias</li>
-              <li>Cuidados: 
-                <br>
-                Lavar 2 o 3 veces cada 12Hs solo con jabón Ph Neutro, agua fria / tibia o templada frotando en circulos la zona.
-                Secar con papel mallado resistente (similar al papel de cocina o el mismo) una vez seco aplicar una capa fina de alguna de las cremas recomendadas cubriendo la zona del tatuaje.
-              </li>
-              <li>Repetir estos pasos hata finalizado el tiempo recomendado durante la sesión.</li>
-              <li>En lo que dure este proceso priorizar dejar respirar la herida para su cicatrización.</li>
-              <li>            Se recomienda dejar el film puesto el primer día del tatuaje (en caso de ser necesario) para prevenir roces a la hora de descansar y/o dormir, posterior a eso quitarlo y seguir con los cuidados normalmente.</li>
-            </ul>
-            
-
-
-            <!-- <ul>
-              <li><span class="sub-titleSpan">Dia Nº1:</span> <br>
-                <br>
-                 Cuando termine la sesión el tatuaje va a ser cubierto para prevenir que cualquier tipo de agente contaminante externo pueda llegar a infectar esta herida.
-                <br>
-                <br>
-                <strong>Papel Film:</strong> Lo mas recomendable es dejarlo puesto de 6 a 8 Horas maximo, sacarlo, limpiar la herida con agua templada y jabón blanco antibacterial y reemplazarlo por uno nuevo dejandolo de 2 a 4 Horas máximo.<br>
-                <br>
-                <strong>Pelicula protectora o Parche:</strong> Dejarlo puesto lo que dure el cuidado del tatuaje o lo que indique el tatuador (Aproximadamente 1 Semana).
-                <br>
-                <br>
-                En ambos casos, cuando se quite el protector lavar la herida con agua templada y jabon blanco o Antibacterial.
-              </li>
-              <li> <span class="sub-titleSpan">Dia Nº2 y Nº3:</span> <br>
-                <br>
-                 Comienza el proceso de cicatrización, es decir, se comienza a generar una costra
-                por encima de la herida, en este punto, para prevenir el engrosamiento de esta capa protectora debemos comenzar a aplicar alguna crema hidratante sin colorantes y/o aromatizantes.
-                <br>
-                <br>
-                Esto lo vamos a hacer 2 o 3 veces al dia y siempre teniendo en cuenta que el objetivo es dejar cicatrizar la herida pero que esta no se seque y produzca una costra mas gruesa que pueda llegar a afectar la estetica del tatuaje final cuando cicatrice.
-                <br>
-                <br>
-                <strong>Cremas recomendadas:</strong> Bepanthol Bayer. Dermaglos y Bagovit A, ambas sin colorantes ni aromatizantes.
-                <br>
-                <br>
-                <span class="sub-titleSpanRed">IMPORTANTE:</span> En el caso de que ya haya comenzado el proceso de cicatrizacion de la piel NO REMOVER LA COSTRA, aplicar la crema hidratante evitando cualquier tipo de rozadura con esa zona hasta que se desprenda de forma natural.
-                Si la zona del tatuaje presenta algun sintoma de irritación suspender el uso de la crema. No aplicar la crema antes de haber pasado 24Hs luego de finalizar la sesión de tatuaje. En caso de que la herida no haya comenzado a cicatrizar no utilizar la crema y limpiarlo regularmente para prevenir cualquier tipo de infección.
-              </li>
-               <li> <span class="sub-titleSpan">Dia Nº4 al Nº7:</span> <br>
-                <br>
-                 Seguir aplicando la crema humectante (preferentemente alguna de las recomendadas más arriba) de 2 a 3 veces por dia
-                 cubriendo la zona del tatuaje.
-                <br>
-                <br>
-                <span class="sub-titleSpanRed">IMPORTANTE:</span>
-                Durante el proceso de curación (Minimo una Semana) debemos recodar que: 
-                <ul>
-                  <li>-El tatuaje NO debe estar expuesto al sol.</li>
-                  <li>-El tatuaje SOLO se debe higienizar con agua fria / templada y los elementos de cuidado antes mencionados.</li>
-                  <li>-Evitar el contacto directo entre la zona del tatuaje / herida y cualquier superficie que no este desinfectada.</li>
-                  <li>-No se debe de rascar la zona en cuestión ni quitar a la fuerza la cascara o costra que se produce naturalmente encima
-                    de la herida ya que esto no solo podria afectar la estética final del tatuaje sino llegar a lastimar la piel.
-                  </li>
-                </ul>
-              </li>
-            </ul> -->
-          </div>
-        </div>
-    </section>
-  <section id="tattooSchedule" class="section__container">
-    <h1 class="h1-sectionTitle underlineSeparation">Agendar Turno:</h1>
-    <div class="sectionInfo__container">
-      
-      <div class="sectionDiv-text">
-        En esta sección vas a poder Agendar un turno ya sea por Mercado Pago o Haciendo una transferencia bancaria a mi CBU (Por WhatsApp).
-        <br><br>
-        <span style="font-weight: bold;" class="sub-titleSpanRed">IMPORTANTE:</span> 
-        <br>
-        Cuando se deja una sesión de tatuaje señada <span style="font-weight: bold;" class="sub-titleSpanRed">¡Esta seña no se devuelve!</span> La seña del tatuaje no solo es una garantia para mi como tatuador que el cliente asista a la sesión previamente acordada sino también una forma de asegurar que; Sea por el motivo que sea que el cliente no pueda asistir a la sesión y/o quiera cancelar su turno, yo pueda (en una minima parte) recomponer los materiales de la sesion gastados y mucho mas imporante ¡El tiempo perdido! 
-        <ul style="font-size: smaller; list-style-type: disc;">
-          <li>En caso de no poder presentarse a la sesión en la fecha y hora acordada y quieras reprogramarla podés escribirme y con gusto agendamos otra fecha.</li> 
-          <li>En caso de no poder seguir con la sesión / tatuaje de manera definitiva por la razón que sea la seña del tatuaje no se devolverá.</li> 
-          <li>En caso de haber abonado mas del valor total de la seña <span class="sub-titleSpanRed">se devolvera el excedente</span>.</li>
+      </header>
+      <div class="sections_nav__container">
+        <ul selected="1" id="navBarId" class="sec_nav-list">
+          <a href="#mainSection" for="mainSection" value="1">Inicio</a>
+          <a href="#tattooCotiz" for="tattooCotiz" value="2">Cotizar Tatuaje</a>
+          <a href="#tattooCare" for="tattooCare" value="3">Cuidados Tatuaje</a>
+          <a href="#tattooSchedule" for="tattooSchedule" value="4"
+            >Agendar Turno</a
+          >
         </ul>
       </div>
-      
-      <br>
-      <br>
+      <main id="mainContainerId" class="main__container">
+        <section id="mainSection" class="section__container">
+          <h1 class="h1-sectionTitle underlineSeparation">Inicio:</h1>
+          <div class="sectionInfo__container">
+            <div class="sectionDiv-text">
+              <h2 class="h2-sectionText">Presentación</h2>
 
+              Mi nombre es Maximiliano Pavez y actualmente llevo
+              <span id="tattoinTime"></span> Años ejerciendo la profesion de
+              tatuador.
+              <br />
+              <br />
+              Esta pagina pretende simplificar la informacion mas relevante del
+              mundo de los tatuajes como son sus cuidados, la cotización y la
+              agenda de turnos.
+              <br />
+              <h2 class="mapLocation h2-sectionText">Ubicación:</h2>
+              <div class="mapContainer">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d687.3094630693053!2d-67.55827759241475!3d-46.44398399469113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1670809430261!5m2!1ses-419!2sar"
+                  width="600"
+                  height="450"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
 
+              <ul>
+                <li>
+                  Probablemente estes interesado en
+                  <a class="aRedirection" for="tattooCotiz" href="#tattooCotiz"
+                    >Cotizar un Tatuaje</a
+                  >.
+                </li>
 
+                <li>
+                  Tambien podes ver los
+                  <a class="aRedirection" for="tattooCare" href="#tattooCare"
+                    >Cuidados del Tatuaje</a
+                  >.
+                </li>
 
+                <li>
+                  Recorda que podes ver mi Trabajo y escribirme a traves de
+                  Instagram:
+                  <a
+                    target="_blank"
+                    href="https://www.instagram.com/ourobostattoo/"
+                    >@OurobosTattoo</a
+                  >.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section id="tattooCotiz" class="section__container">
+          <h1 class="h1-sectionTitle underlineSeparation">Cotizar Tatuaje:</h1>
+          <div class="sectionInfo__container">
+            <div class="sectionDiv-text">
+              ¿Ya tenes tu diseño? Vamos a cotizarlo: <br />
+              <br />
+              Recorda que esta sección esta pensada para que puedas consultar
+              facilmente el costo del tatuaje,
+              <b style="color: rgb(255, 62, 62)"> este puede variar</b>
+              dependiendo de, por ejemplo: la complejidad del diseño, zona del
+              cuerpo, tamaño, si es a color, etc. Es probable que el precio
+              final no sea el mismo.
 
-      <h2 class="h2-sectionText">Agendar un turno por Mercado Pago:</h2>
-      <div id="paymentSection" class="sectionDiv-text paymentSeña">
-      </div>
-      <div id="paymentBtn">
-        <script src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
-        data-preference-id="254898688-e7ace32d-c4d5-4544-8a45-1ebc8993b57e" data-source="button">
-        </script>
-      </div>
+              <ul>
+                <h2 class="h2-sectionText">¿Cómo lo hago?</h2>
+                <li>
+                  Primero debemos tener el tamaño aproximado del alto y largo
+                  del tatuaje en Centímetros (te recomiendo medir con una regla
+                  o cinta métrica la zona del cuerpo donde queres el tatuaje).
+                </li>
+
+                <li>
+                  Ya que tenemos las medidas, ingresamos el tamaño en Cm en los
+                  campos correspondientes.
+                </li>
+                <li>Dale a cotizar y listo!</li>
+              </ul>
+            </div>
+          </div>
+
+          <form id="formEl" action="" class="cotizarTattProgr">
+            <div class="cotizarTattProgr-widthAndHeight">
+              <label for="cmWidth"
+                >Largo:
+                <input
+                  required
+                  min="1"
+                  maxlength="2"
+                  max="45"
+                  name="cmWidth"
+                  type="number"
+                  class="widthAndHeightStyle"
+                  placeholder="Centimetros"
+                  id="cmWidth"
+                />
+              </label>
+              <label for="cmHeight"
+                >Alto:
+                <input
+                  required
+                  min="1"
+                  max="40"
+                  name="cmHeight"
+                  type="number"
+                  class="widthAndHeightStyle"
+                  placeholder="Centimetros"
+                  id="cmHeight"
+                />
+              </label>
+
+              <div class="checksContainer">
+                <label for="complexityCheckId"
+                  >Complejo
+                  <input type="checkbox" id="complexityCheckId" />
+                </label>
+                <label for="colorCheckId"
+                  >A color
+                  <input type="checkbox" id="colorCheckId" />
+                </label>
+              </div>
+              <p style="text-align: center; padding-top: 10px; width: 100%">
+                Indicar los datos correspondientes en base al diseño
+              </p>
+            </div>
+            <div class="cotizationDiv">
+              <button id="btnCotizar">Cotizar</button>
+              <div id="finalPrice">Precio:</div>
+            </div>
+            <button id="whatsappRedirectionBtn">
+              <a id="whatsappRedirectionLink" target="_blank"
+                >Escribime
+                <img
+                  src="https://img.icons8.com/material-outlined/30/000000/whatsapp--v1.png"
+                  alt=""
+                />
+              </a>
+            </button>
+          </form>
+          <div
+            id="tattooCotizationMoreInfoId"
+            class="sectionFooter sectionDiv-text"
+          >
+            <div id="tattooCotizationMsgId"></div>
+            <div>
+              <ul>
+                <li>
+                  Te recomiendo que veas los
+                  <a class="aRedirection" for="tattooCare" href="#tattooCare"
+                    >Cuidados del Tatuaje</a
+                  >.
+                </li>
+                <li>
+                  Tambien podes
+                  <a
+                    class="aRedirection"
+                    for="#tattooSchedule"
+                    href="#tattooSchedule"
+                    >Agendar un Turno</a
+                  >.
+                </li>
+                <li>
+                  ¿Tenes alguna duda? Escribime a traves de Instagram:
+                  <a
+                    target="_blank"
+                    href="https://www.instagram.com/ourobostattoo/"
+                    >@OurobosTattoo</a
+                  >.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section id="tattooCare" class="section__container">
+          <h1 class="h1-sectionTitle underlineSeparation">
+            Cuidados del Tatuaje:
+          </h1>
+          <div class="sectionInfo__container">
+            <div class="sectionDiv-text">
+              Esta sección esta pensada para que puedas consultar facilmente los
+              cuidados del tatuaje en base a mi experiencia como tatuador asi
+              como el seguimiento que le doy a los tatuajes de mis clientes.
+              Recoda que ante la menor duda
+              <b style="color: rgb(255, 62, 62)">
+                es mejor consultar con un Médico Profesional</b
+              >.
+              <br />
+              <br />
+              <span class="sub-titleSpan"
+                >Conocimientos previos post Tattoo:</span
+              ><br />
+              <ul style="list-style-type: disc">
+                <li>
+                  No rascar o exponer el tatuaje (herida) al polvo / humedad
+                  constante.
+                </li>
+                <li>Evitar exponer la zona del tatuaje al sol directo.</li>
+                <li>
+                  No exponer la zona del tatuaje a superficies o ambientes
+                  antihigiénicos o que <br />
+                  no esten previamente desinfectados.
+                </li>
+                <li>
+                  Durante este proceso de curado esta super desaconsejado nadar
+                  en piscinas publicas o la playa. No se recomienda realizar
+                  ninguna clase de deporte que conlleve esfuerzo físico.
+                </li>
+              </ul>
+
+              <br />
+              <span class="sub-titleSpan">Proceso de Curado:</span>
+              <br />
+              <br />
+              <strong>Cremas recomendadas:</strong> Bepanthol Bayer. Dermaglos y
+              Bagovit A, ambas sin colorantes ni aromatizantes.
+              <br />
+              <ul style="list-style-type: disc">
+                <li>Tiempo aproximado de curado: De 7 a 12 Dias</li>
+                <li>
+                  Cuidados:
+                  <br />
+                  Lavar 2 o 3 veces cada 12Hs solo con jabón Ph Neutro, agua
+                  fria / tibia o templada frotando en circulos la zona. Secar
+                  con papel mallado resistente (similar al papel de cocina o el
+                  mismo) una vez seco aplicar una capa fina de alguna de las
+                  cremas recomendadas cubriendo la zona del tatuaje.
+                </li>
+                <li>
+                  Repetir estos pasos hata finalizado el tiempo recomendado
+                  durante la sesión.
+                </li>
+                <li>
+                  En lo que dure este proceso priorizar dejar respirar la herida
+                  para su cicatrización.
+                </li>
+                <li>
+                  Se recomienda dejar el film puesto el primer día del tatuaje
+                  (en caso de ser necesario) para prevenir roces a la hora de
+                  descansar y/o dormir, posterior a eso quitarlo y seguir con
+                  los cuidados normalmente.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section id="tattooSchedule" class="section__container">
+          <h1 class="h1-sectionTitle underlineSeparation">Agendar Turno:</h1>
+          <div class="sectionInfo__container">
+            <div class="sectionDiv-text">
+              En esta sección vas a poder Agendar un turno ya sea por Mercado
+              Pago o Haciendo una transferencia bancaria a mi CBU (Por
+              WhatsApp).
+              <br /><br />
+              <span style="font-weight: bold" class="sub-titleSpanRed"
+                >IMPORTANTE:</span
+              >
+              <br />
+              Cuando se deja una sesión de tatuaje señada
+              <span style="font-weight: bold" class="sub-titleSpanRed"
+                >¡Esta seña no se devuelve!</span
+              >
+              La seña del tatuaje no solo es una garantia para mi como tatuador
+              que el cliente asista a la sesión previamente acordada sino
+              también una forma de asegurar que; Sea por el motivo que sea que
+              el cliente no pueda asistir a la sesión y/o quiera cancelar su
+              turno, yo pueda (en una minima parte) recomponer los materiales de
+              la sesion gastados y mucho mas imporante ¡El tiempo perdido!
+              <ul style="font-size: smaller; list-style-type: disc">
+                <li>
+                  En caso de no poder presentarse a la sesión en la fecha y hora
+                  acordada y quieras reprogramarla podés escribirme y con gusto
+                  agendamos otra fecha.
+                </li>
+                <li>
+                  En caso de no poder seguir con la sesión / tatuaje de manera
+                  definitiva por la razón que sea la seña del tatuaje no se
+                  devolverá.
+                </li>
+                <li>
+                  En caso de haber abonado mas del valor total de la seña
+                  <span class="sub-titleSpanRed">se devolvera el excedente</span
+                  >.
+                </li>
+              </ul>
+            </div>
+
+            <br />
+            <br />
+
+            <h2 class="h2-sectionText">Agendar un turno por Mercado Pago:</h2>
+            <div id="paymentSection" class="sectionDiv-text paymentSeña"></div>
+            <div id="paymentBtn">
+              <script
+                src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
+                data-preference-id="254898688-e7ace32d-c4d5-4544-8a45-1ebc8993b57e"
+                data-source="button"
+              ></script>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
-</section>
-  </main>
-  </div>
-  <!-- <video autoplay muted loop id="backgroundVideoId">
-    <source src="./media/backgroundVideo.mp4" type="video/mp4">
-  </video> -->
-  <div id="bgColorId"></div>
-  <script src="./src/logic.js" type="module"></script>
-</body>
 
+    <video autoplay muted loop id="backgroundVideoId">
+      <source src="./media/backgroundVideo.mp4" type="video/mp4" />
+    </video>
+    <div id="bgColorId"></div>
+    <script src="./src/logic.js" type="module"></script>
+  </body>
 </html>

@@ -1,12 +1,22 @@
 import { tattooXnY } from "./configFile.js"
 
+
+
 const idSheets = '1MERztkt3mv4lQbHRVpc1iPdochBNwBwV7CXfrMKrP1o'
 const apiKey = 'AIzaSyC8qom2bU-CbjLUCl_v7_4uRSrMZ1eEDIE'
-const sheetValues = 'B17:B18'
+const sheetValues = 'B16:B21'
 const sheetUrl = "https://content-sheets.googleapis.com/v4/spreadsheets/" + idSheets + "/values/" + sheetValues + "?access_token=" + apiKey + "&key=" + apiKey
 
 const finalPriceEl = document.getElementById("finalPrice")
+const whatsAppCTA = document.getElementById("whatsappRedirectionBtn")
 //Loading text 3 dots animation
+
+const checkElComplexity = document.getElementById("complexityCheckId")
+const checkElColor = document.getElementById("colorCheckId")
+
+
+
+
 const loadingText = document.getElementById("loadingTextID")
 const loadingModal = document.getElementsByClassName("app__loader")[0]
 const loadingAnimation = () => {
@@ -21,8 +31,23 @@ const handleCloseLoadingAnim = () => {
     loadingModal.style.display = "none"
 }
 
+const handleWhatsappMessageCustom = (tattData) => {
+    console.log(tattData);
+    const personalPhone = "2974056545"
+    whatsAppCTA.style.visibility = "visible"
+
+    // tattData.hasComplexity = Boolean(checkElComplexity.value)
+    // tattData.hasColor = Boolean(checkElColor.value)
+
+    console.log(checkElColor.value);
+
+    const whatsappMessage = `https://wa.me/${personalPhone}/?text=Hola%20me%20gustaria%20consultarle%20acerca%20de%20un%20tatuaje:%20mide%20${tattData.inputCm.cmWidth}x${tattData.inputCm.cmHeight}cm,%20tiene%20un%20costo%20aproximado%20de%20$${tattData.finalPrice}`
+    console.log(whatsappMessage.toString());
+    document.getElementById("whatsappRedirectionLink").href = whatsappMessage
+}
+
 //handle infoBasic
-function handleInfoBasic(){
+function handleInfoBasic() {
     const calculateExpYears = () => {
         const TATT_SINCE = 2019
         const ACTUAL_YEAR = new Date().getFullYear()
@@ -50,12 +75,18 @@ function handleCotizar(e) {
     }
     const calculatePriceCm = async (sheetValues, dataObj) => {
         //handler de los precios
-        const pricePerCm = sheetValues[0][0]
-        const basicAmount = sheetValues[1][0]
+
+        console.log(sheetValues);
+        const basicAmount = sheetValues[0][0]
+        const pricePerCm = sheetValues[1][0]
+        const complexityPrice = sheetValues[3][0]
+        const colorPrice = sheetValues[4][0]
+        const minimumPrice = sheetValues[5][0]
+
         const totalCm = dataObj.cmWidth * dataObj.cmHeight
         const foo = totalCm * pricePerCm
         const handleTotalCm = (totalCm) => {
-           
+
             if (totalCm <= 50) return 100
             if (totalCm <= 100) return 10
             if (totalCm <= 200) return 6
@@ -63,19 +94,25 @@ function handleCotizar(e) {
         }
 
         let finalAmount = Math.round(foo - foo / handleTotalCm(totalCm) + Number(basicAmount))
-        if (finalAmount <= 2500) finalAmount = 2500
+        if (checkElComplexity.value == "true") finalAmount = finalAmount + Number(complexityPrice)
+        if (checkElColor.value == "true") finalAmount = finalAmount + Number(colorPrice)
+        if (finalAmount <= minimumPrice) finalAmount = minimumPrice
 
         const finalObj = {
             insumosPrice: basicAmount,
             precioCm: pricePerCm,
             tattooCm: totalCm,
             finalPrice: String(finalAmount).slice(0, -1) + 0,
+            hasColor: checkElComplexity.checked,
+            hasComplexity: checkElComplexity.checked,
             inputCm: dataObj
         }
 
         return finalObj
     }
     const printData = (data) => {
+        handleWhatsappMessageCustom(data)
+
         finalPriceEl.innerHTML = `Precio: $${data.finalPrice}`
         finalPriceEl.classList.add("finalPriceCheck")
         setTimeout(() => {
@@ -97,8 +134,12 @@ function handleCotizar(e) {
                 console.log(err);
             })
         let cmPriceObj = await calculatePriceCm(sheetValues, formDataObj)
+        console.log(cmPriceObj);
+        handleWhatsappMessageCustom(cmPriceObj)
+
         printData(cmPriceObj)
     }
+
     obtainPrice()
 }
 
