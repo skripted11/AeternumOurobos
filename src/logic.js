@@ -33,7 +33,7 @@ const handleCloseLoadingAnim = () => {
 
 const handleWhatsappMessageCustom = (tattData) => {
     console.log(tattData);
-    const personalPhone = "2974056545"
+    const personalPhone = "542974056545"
     whatsAppCTA.style.visibility = "visible"
 
     // tattData.hasComplexity = Boolean(checkElComplexity.value)
